@@ -7,6 +7,10 @@ app.controller('contentfulController', [
 
         $scope.model.placements = [
             {
+                name: 'Homepage Container',
+                link: 'https://pp.grubhub.com/?chiri_homepage-container='
+            },
+            {
                 name: 'Homepage Hero',
                 link: 'https://pp.grubhub.com/?chiri_homepage-hero-content='
             },
@@ -25,6 +29,10 @@ app.controller('contentfulController', [
             {
                 name: 'Homepage Subfooter',
                 link: 'https://pp.grubhub.com/?chiri_homepage-subfooter-content='
+            },
+            {
+                name: 'Let\'s Eat Container',
+                link: 'https://pp.grubhub.com/lets-eat/?chiri_homepage-container='
             },
             {
                 name: 'Let\'s Eat Hero',
