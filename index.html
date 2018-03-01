@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<title>Contentful Frontend Testing</title>
+	<meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">       
+    <link rel="stylesheet" href="css/styles.css" title="External Style Sheet">
+</head>
+
+<body ng-controller="contentfulController">
+	<div class="container">
+        <h1>{{model.title}}</h1>
+
+        <p>
+            <div>
+                    <h3>Contentful ID: <input type="text" class="form-control" ng-model="model.id"></h3>
+                    Sample ID: 6lxixFbA642eCQOICiM0eI
+            </div>
+        </p>
+
+		<p>
+            <div>
+                    <h3>Select the placement of your campaign from the list below.</h3>
+                    Note: the "Let's Eat" page requires a logged-in user. Otherwise, you will be redirected to the homepage.
+            </div>
+        </p>
+
+        <p>
+            <div ng-repeat="placement in model.placements">
+                <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
+                <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Testing Link</a>
+            </div>
+        </p>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="./app/app.js"></script>
+	<script src="./app/contentfulController.js"></script>
+</body>
+
+</html>
