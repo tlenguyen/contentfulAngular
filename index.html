@@ -18,17 +18,65 @@
             </div>
         </p>
 
-		<p>
+        <p>
             <div>
                     <h3>Select the placement of your campaign from the list below.</h3>
-                    Note: the "Let's Eat" page requires a logged-in user. Otherwise, you will be redirected to the homepage.
+                    Note: <strong>Let's Eat</strong> requires a logged-in user. Otherwise, you will be redirected to the homepage. 
+                    <strong>Track Your Order</strong>, <strong>Order Receipt</strong>, and <strong>Thank You</strong> placement options are disabled until more information is provided on how they can be properly tested.
             </div>
         </p>
 
         <p>
-            <div ng-repeat="placement in model.placements">
-                <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
-                <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Testing Link</a>
+            <div class="row">
+                <div class="column">
+                    <h3>Homepage</h3>
+                    <div ng-repeat="placement in model.homepage">
+                        <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Let's Eat</h3>
+                    <div ng-repeat="placement in model.letsEat">
+                        <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Search</h3>
+                    <div ng-repeat="placement in model.search">
+                        <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Restaurant</h3>
+                    <div ng-repeat="placement in model.restaurant">
+                        <label><input type="checkbox" ng-model="checked" />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Order Status</h3>
+                    <div ng-repeat="placement in model.orderStatus">
+                        <label><input type="checkbox" ng-model="checked" disabled />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Order Receipt</h3>
+                    <div ng-repeat="placement in model.orderReceipt">
+                        <label><input type="checkbox" ng-model="checked" disabled />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Thank You</h3>
+                    <div ng-repeat="placement in model.thankYou">
+                        <label><input type="checkbox" ng-model="checked" disabled />{{placement.name}}</label>
+                        <a ng-show="checked" ng-href="{{placement.link}}{{model.id}}" target="_blank">Link</a>
+                    </div>
+                </div>
             </div>
         </p>
 	</div>

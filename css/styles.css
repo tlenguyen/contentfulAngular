@@ -39,3 +39,9 @@ h5 {
 p { 
     font-size: 1.2em;
 }
+
+.column {
+    float: left;
+    width: 12.50%;
+    padding: 10px;
+}
